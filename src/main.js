@@ -467,6 +467,7 @@ Comment.prototype = {
     getlist: function(){
         document.querySelector('.disqus').style.display = 'none';
         document.querySelector('#comment .comment').style.display = 'block';
+        document.querySelector('#comment .comment .comment-header').style.width = '100%';
         if(!this.count || !!this.offsetTop){
             var xhrListPosts = new XMLHttpRequest();
             xhrListPosts.open('GET', site.apipath + '/getcomments.php?link=' + encodeURIComponent(page.url) + '&cursor=' + this.next, true);
